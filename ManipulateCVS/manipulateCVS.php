@@ -36,7 +36,7 @@ class manipulateCVS {
 					$record = array_combine($header,$data);
 					//print_r($record);
 					$table[] = "('$record[CustomerID]','$record[CustomerName]','$record[CustomerAddress]',
-					'$record[CustomerCity]','$record[CustomerState]','$record[CustomerZipCode]','$record[CustomerPhone])";
+					'$record[CustomerCity]','$record[CustomerState]','$record[CustomerZipCode]','$record[CustomerPhone]')";
 					echo "<p>";
 					//print_r($table);
 					echo "<p>";
