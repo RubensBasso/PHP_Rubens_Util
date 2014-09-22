@@ -35,23 +35,14 @@ class manipulateCVS {
 					
 					$record = array_combine($header,$data);
 					//print_r($record);
-					$table[] = "('$record[CustomerID]','$record[CustomerName]','$record[CustomerAddress]
-					','$record[CustomerCity]','$record[CustomerState]','$record[CustomerZipCode]','$record[CustomerPhone1]
-					','$record[CustomerPhone2]','$record[CustomerEmail]','$record[CustomerDateAdded]','$record[CustomerSource]
-					','$record[CustomerStatus]','$record[CustomerCancelDate]','$record[CustomerCancelReason]','$record[Salesman]
-					','$record[Frequency]','$record[ServiceType]','$record[Price]','$record[AutoPay]
-					','$record[AgreementLength]','$record[PreferredTech]','$record[LastService]','$record[InitialService]
-					','$record[NextService]','$record[Balance]','$record[CCToken]','$record[BillingAddress]
-					','$record[BillingCity]','$record[BillingState]','$record[BillingZipCode]')";
+					$table[] = "('$record[CustomerID]','$record[CustomerName]','$record[CustomerAddress]',
+					'$record[CustomerCity]','$record[CustomerState]','$record[CustomerZipCode]','$record[CustomerPhone])";
 					echo "<p>";
 					//print_r($table);
 					echo "<p>";
 				}
-				$qry = "INSERT INTO tmpGenericImport (CustomerID,CustomerName,CustomerAddress,CustomerCity,CustomerState,
-						CustomerZipCode,CustomerPhone1,CustomerPhone2,CustomerEmail,CustomerDateAdded,CustomerSource,CustomerStatus,
-						CustomerCancelDate,CustomerCancelReason,Salesman,Frequency,ServiceType,Price,AutoPay,AgreementLength,
-						PreferredTech,LastService,InitialService,NextService,Balance,CCToken,BillingAddress,BillingCity,
-						BillingState,BillingZipCode) VALUES ".implode(", ", $table);
+				$qry = "INSERT INTO tmpGenericTable (CustomerID,CustomerName,CustomerAddress,CustomerCity,CustomerState,
+						CustomerZipCode,CustomerPhone) VALUES ".implode(", ", $table);
 				
 				echo $qry;
 				echo "<p>";
