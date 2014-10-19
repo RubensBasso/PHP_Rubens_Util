@@ -6,5 +6,5 @@
 	$excelFile = new manipulateCVS();
 	$excelFile->readCVSMappingAndQuery("ImportFilev01.csv");
 	ini_set('auto_detect_line_endings',FALSE);
-	
+
 ?>
